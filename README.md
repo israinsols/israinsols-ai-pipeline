@@ -2,13 +2,12 @@
 
 An enterprise-grade, fully automated lead generation and management ecosystem designed for freelancers and agencies. This project leverages **G0I's high-performance AI models** (MiniMax M2.5, DeepSeek V3, GPT-4o) to automate client outreach and negotiation.
 
-
 ---
 
 ## ✨ Key Features
 
 ### 🤖 AI-Powered Automation
-- **One-Click AI Proposals:** Generates hyper-personalized, high-converting proposals using the beast **MiniMax M2.5** model.
+- **One-Click AI Proposals:** Generates hyper-personalized, high-converting proposals using the beast **MiniMax M2.5** or **GPT-4o** models.
 - **AI Negotiation Coach:** Forwards client messages to get strategic advice and "perfect replies" to close deals.
 - **Smart Formatting:** Automatic HTML formatting for professional Telegram and Discord alerts.
 
@@ -24,6 +23,24 @@ An enterprise-grade, fully automated lead generation and management ecosystem de
 
 ---
 
+## 🤝 AI Coaching & Bot Commands
+
+The Telegram bot is the command center for your pipeline. Here are the available commands:
+
+| Command | Description |
+|---------|-------------|
+| `/start` | 🏠 Opens the main menu and dashboard. |
+| `/recent` | 📋 Shows the latest leads found by the scraper. |
+| `/unnotified` | 🔔 List leads that haven't been alerted yet. |
+| `/stats` | 📊 Displays real-time pipeline statistics (Total leads, Contacted, etc.). |
+| `/scrape` | 🤖 Manually triggers the scraper to find new leads. |
+| `/search` | 🔍 Search leads by keywords (e.g., `/search react`). |
+| `/proposal` | 📝 **AI Feature**: Generates a high-converting pitch for any job text. |
+| `/coach` | 🤝 **AI Feature**: Get negotiation strategy for client messages. |
+| `/help` | 📖 Shows the user guide and support info. |
+
+---
+
 ## 🛠 Tech Stack
 
 - **Backend:** Python, Django (REST Framework)
@@ -35,11 +52,25 @@ An enterprise-grade, fully automated lead generation and management ecosystem de
 
 ---
 
+## 🛠 Project Structure
+```text
+israinsols_pipeline/
+├── leads/              # Core logic: Bot, Scraper, Tasks
+│   ├── bot/            # Telegram handlers & keyboards
+│   ├── scraper/        # Scraper logic for Freelancer.com
+│   └── tasks.py        # Celery background tasks
+├── config/             # Django settings & Celery config
+├── manage.py           # Django management script
+└── .env                # Secrets & Configurations (Hidden)
+```
+
+---
+
 ## 🚀 Quick Start
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/yourusername/israinsols-pipeline.git
+git clone https://github.com/israinsols/israinsols-ai-pipeline.git
 cd israinsols-pipeline
 ```
 
@@ -69,13 +100,6 @@ python manage.py run_bot
 # Start Celery (for automation)
 python start_celery.py
 ```
-
----
-
-## 🤝 AI Coaching Commands
-In Telegram, use:
-- `/proposal [job_text]` - Generate an instant pitch.
-- `/coach [client_message]` - Get negotiation strategy.
 
 ---
 
