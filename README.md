@@ -80,5 +80,3 @@ In Telegram, use:
 
 ---
 
-## 📜 License
-MIT License. Built by **israin Solution** for the G0I Vibe Coding Contest 2026.
