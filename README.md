@@ -2,7 +2,6 @@
 
 An enterprise-grade, fully automated lead generation and management ecosystem designed for freelancers and agencies. This project leverages **G0I's high-performance AI models** (MiniMax M2.5, DeepSeek V3, GPT-4o) to automate client outreach and negotiation.
 
-Built for the **G0I Vibe Coding Contest**.
 
 ---
 
